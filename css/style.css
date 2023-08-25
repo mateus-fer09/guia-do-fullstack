@@ -28,7 +28,7 @@ body {
 
 header {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     background-color: var(--color7);
     display: flex;
     justify-content: center;
@@ -63,6 +63,7 @@ main {
     height: auto;
     max-width: 1350px;
     margin: auto;
+    margin-bottom: 40px;
     padding: 20px;
 }
 
@@ -91,31 +92,58 @@ main h2 #on {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 30px;
-    overflow-x: auto;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 390px) {
-    .linguagem {
-        justify-content: left;
-        gap: 40px;
-    }
-}
-
-.linguagem a {
-    background-color: var(--color2);
-    color: var(--color7);
-    padding: 10px;
+.linguagem .ling {
+    padding: 20px 10px;
+    width: 420px;
+    height: auto;
     border-radius: 20px;
-    width: 130px;
-    text-align: center;
-    border: 2px solid var(--color7);
-    transition: 0.4s;
 }
 
-.linguagem a:hover {
+.linguagem .ling .img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: var(--color6);
+}
+
+.linguagem .ling .headline {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.linguagem .ling .headline h1 {
+    margin-bottom: 12px;
+    color: var(--color2);
+}
+
+.linguagem .ling .headline p {
+    text-align: justify;
+    color: var(--color3);
+}
+
+.linguagem .ling a {
+    padding: 10px;
     background-color: var(--color7);
     color: var(--color2);
-    border: 2px solid var(--color5);
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: var(--color7);
+}
+
+footer h3 {
+    color: var(--color4);
+    text-align: center;
+    padding: 20px;
 }
