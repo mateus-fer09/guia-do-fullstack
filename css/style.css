@@ -1,134 +1,121 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'); /* Font Poppins */
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #dbdbdb;
+a {
+    text-decoration: none;
 }
 
-a {text-decoration: none;}
+:root {
+    --color1: #4C655F;
+    --color2: #09CF64;
+    --color3: #353F3D;
+    --color4: #FEFEFE;
+    --color5: #DBDBD9;
+    --color6: #282A23;
+    --color7: #181912;
+}
+
+body {
+    background-color: var(--color5);
+}
 
 header {
-    height: auto;
+    width: 100%;
+    height: 500px;
+    background-color: var(--color7);
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    padding: 20px;
+    gap: 30px;
 }
 
 header h1 {
+    color: var(--color2);
     text-align: center;
-    padding: 20px;
-    font-size: 2.5em;
-    background-color: white;
+    font-size: 3em;
+    max-width: 500px;
 }
 
 header h1 span {
-    color: rgb(9, 218, 9);
+    color: var(--color4);
 }
 
-header a {
-    padding: 10px;
-    background-color: rgb(9, 218, 9);
-    width: 100px;
+header p {
+    color: var(--color5);
+    max-width: 470px;
     text-align: center;
-    color: #000;
-    margin: auto;
-    margin-top: 20px;
-    border: 1px solid #000;
-    border-radius: 40px;
-    box-shadow: 0 0 5px #222;
+}
+
+header p span {
+    color: var(--color2);
 }
 
 main {
-    max-width: 1366px;
     height: auto;
+    max-width: 1350px;
     margin: auto;
-    margin-top: 50px;
     padding: 20px;
 }
 
-.ling-main {
-    width: 100%;
-    height: 100%;
-}
-
-.ling-main .alert {
-    background-color: #fff;
-    padding: 20px;
-}
-
-.ling-main .alert p {
+main h2 {
     text-align: center;
+    max-width: 570px;
+    margin: auto;
+    margin-top: 20px;
     font-style: italic;
-    color: gray;
+}
+
+main h2 #off {
+    color: var(--color1);
+} 
+
+main h2 #on {
+    color: var(--color2);
 }
 
 .linguagem {
-    max-width: 80%;
-    min-height: 200px;
-    padding: 20px;
-    margin: auto;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    background-color: white;
-    transition: 1s ease;
-    border: 1px solid #222;
-}
-
-.linguagem .descripition p {
-    margin-top: 15px;
-    height: auto;
-    text-align: justify;
-    margin-bottom: 50px;
-}
-
-.linguagem .descripition a {
-    background-color: rgb(9, 218, 9);
-    color: #000;
-    padding: 10px;
-    border-radius: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border: 2px solid #333;
-    transition: 0.4s ease;
-}
-
-.linguagem .descripition a:hover {
-    box-shadow: 0 0 5px #00000091;
-    background-color: #fff;
-    color: #000;
-    border: 2px solid rgb(9, 218, 9);
-}
-
-.javascript-main {
-    padding: 10px;
-}
-
-.javascript-main h1 {
-    margin-bottom: 20px;
-}
-
-.javascript-main details {
-    margin-bottom: 30px;
-    padding: 10px;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-footer {
     width: 100%;
-    min-height: 100px;
+    height: auto;
+    background-color: var(--color4);
+    margin-top: 70px;
+    border-radius: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #222;
+    gap: 30px;
+    overflow-x: auto;
 }
 
-footer h4 {
+@media screen and (max-width: 390px) {
+    .linguagem {
+        justify-content: left;
+        gap: 40px;
+    }
+}
+
+.linguagem a {
+    background-color: var(--color2);
+    color: var(--color7);
     padding: 10px;
-    color: #fff;
+    border-radius: 20px;
+    width: 130px;
+    text-align: center;
+    border: 2px solid var(--color7);
+    transition: 0.4s;
+}
+
+.linguagem a:hover {
+    background-color: var(--color7);
+    color: var(--color2);
+    border: 2px solid var(--color5);
 }
