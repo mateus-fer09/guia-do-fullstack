@@ -20,6 +20,10 @@ a {
     --color5: #DBDBD9;
     --color6: #282A23;
     --color7: #181912;
+    --html: #ff4500;
+    --css: #254BDD;
+    --javascript: #F7DF1E;
+    --react: #00D8FF;
 }
 
 body {
@@ -111,6 +115,12 @@ main h2 #on {
     background-color: var(--color6);
 }
 
+.linguagem .ling .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
 .linguagem .ling .headline {
     padding: 10px;
     margin-top: 20px;
@@ -133,6 +143,42 @@ main h2 #on {
     color: var(--color2);
     margin-left: 10px;
     border-radius: 5px;
+}
+
+.linguagem .html .headline h1 {
+    color: var(--html);
+}
+
+.linguagem .html a {
+    color: var(--color4);
+    background-color: var(--html);
+}
+
+.linguagem .css .headline h1 {
+    color: var(--css);
+}
+
+.linguagem .css a {
+    color: var(--color4);
+    background-color: var(--css);
+}
+
+.linguagem .javascript .headline h1 {
+    color: var(--javascript);
+}
+
+.linguagem .javascript a {
+    background-color: var(--javascript);
+    color: var(--color7);
+}
+
+.linguagem .react .headline h1 {
+    color: var(--react);
+}
+
+.linguagem .react a {
+    background-color: var(--react);
+    color: var(--color4);
 }
 
 footer {
