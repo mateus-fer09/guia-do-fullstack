@@ -77,6 +77,15 @@ main {
     border-radius: 20px;
     margin: auto;
     padding: 20px;
+    transition: 0.2s ease;
+}
+
+.posts:hover {
+    background-color: gainsboro;
+}
+
+.posts .post:hover {
+    background-color: var(--color4);
 }
 
 .posts .post {
@@ -89,6 +98,8 @@ main {
     align-items: center;
     margin-bottom: 20px;
     gap: 30px;
+    transition: 0.2s ease;
+    border-radius: 20px;
 }
 
 .posts .post .img {
