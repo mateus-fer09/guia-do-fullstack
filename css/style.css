@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'); /* Font Poppins */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"); /* Icones Bootstap */
 
 * {
     margin: 0;
@@ -17,184 +18,149 @@ a {
     --color2: #09CF64;
     --color3: #353F3D;
     --color4: #FEFEFE;
-    --color5: #DBDBD9;
-    --color6: #282A23;
-    --color7: #181912;
-    --html: #ff4500;
-    --css: #254BDD;
-    --javascript: #F7DF1E;
-    --react: #00D8FF;
+    --color5: #F0F2F5;
+    --color6: #DBDBD9;
+    --color7: #282A23;
+    --color8: #181912;
 }
 
 body {
     background-color: var(--color5);
 }
 
-header {
-    width: 100%;
-    min-height: 500px;
-    background-color: var(--color7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
-}
-
-header h1 {
-    color: var(--color2);
-    text-align: center;
-    font-size: 3em;
-    max-width: 500px;
-}
-
-header h1 span {
+.nav-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color8);
     color: var(--color4);
+    width: 0px;
+    height: 100%;
+    transition: 0.3s;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 1;
 }
 
-header p {
-    color: var(--color5);
-    max-width: 470px;
-    text-align: center;
-}
-
-header p span {
-    color: var(--color2);
-}
-
-main {
-    height: auto;
-    max-width: 1350px;
-    margin: auto;
-    margin-bottom: 40px;
+.nav-left-content {
     padding: 20px;
 }
 
-main h2 {
+.nav-left-content .close-nav {
+    font-size: 1em;
     text-align: center;
-    max-width: 570px;
-    margin: auto;
-    margin-top: 20px;
-    font-style: italic;
+    margin-top: 30px;
+    border: 2px solid var(--color2);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-main h2 #off {
-    color: var(--color1);
-} 
+.nav-left-content .close-nav:hover {
+    background-color: var(--color4);
+    color: var(--color8);
+    box-shadow: 0 0 10px #09CF64;
+}
 
-main h2 #on {
+.nav-left-content .headline h1 {
+    text-align: center;
     color: var(--color2);
 }
 
-.linguagem {
-    width: 100%;
-    height: auto;
-    background-color: var(--color4);
-    margin-top: 70px;
-    border-radius: 20px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 30px;
-    flex-wrap: wrap;
+.nav-left-content .headline p {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 7px;
 }
 
-.linguagem .ling {
-    padding: 20px 10px;
-    width: 420px;
-    height: auto;
-    border-radius: 20px;
+.nav-left-content .navigation {
+    margin-top: 40px;
+    border-top: 2px solid #282A23;
+    border-bottom: 2px solid #282A23;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-left-content .navigation a {
+    text-decoration: none;
+    color: var(--color6);
+    border: 1px solid var(--color1);
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    transition: 0.2s ease;
+}
+
+.nav-left-content .navigation a:hover {
+    background-color: var(--color2);
+    color: var(--color8);
+}
+
+.nav-left-content .social {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-left-content .social .bi {
+    font-size: 1.5em;
+    background-color: var(--color7);
+    color: var(--color2);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
     transition: 0.3s ease;
 }
 
-.linguagem .ling:hover {
-    background-color: gainsboro;
+.nav-left-content .social .bi:hover {
+    background-color: var(--color2);
+    color: var(--color8);
 }
 
-.linguagem .ling .img {
+header {
     width: 100%;
-    height: 200px;
-    border-radius: 20px;
-    background-color: var(--color6);
-}
-
-.linguagem .ling .img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-
-.linguagem .ling .headline {
+    height: 70px;
+    background-color: var(--color8);
     padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.linguagem .ling .headline h1 {
-    margin-bottom: 12px;
+header .top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .top .bi {
     color: var(--color2);
-}
-
-.linguagem .ling .headline p {
-    text-align: justify;
-    color: var(--color3);
-}
-
-.linguagem .ling a {
-    padding: 10px;
     background-color: var(--color7);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 1.7em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+header .top .bi:hover {
+    background-color: var(--color2);
+    color: var(--color8);
+}
+
+header .headline {
     color: var(--color2);
-    margin-left: 10px;
-    border-radius: 5px;
+    font-size: 1.8em;
+    padding: 10px 20px;
+    text-align: right;
 }
 
-.linguagem .html .headline h1 {
-    color: var(--html);
-}
-
-.linguagem .html a {
+header .headline span {
     color: var(--color4);
-    background-color: var(--html);
-}
-
-.linguagem .css .headline h1 {
-    color: var(--css);
-}
-
-.linguagem .css a {
-    color: var(--color4);
-    background-color: var(--css);
-}
-
-.linguagem .javascript .headline h1 {
-    color: var(--javascript);
-}
-
-.linguagem .javascript a {
-    background-color: var(--javascript);
-    color: var(--color7);
-}
-
-.linguagem .react .headline h1 {
-    color: var(--react);
-}
-
-.linguagem .react a {
-    background-color: var(--react);
-    color: var(--color4);
-}
-
-footer {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    background-color: var(--color7);
-}
-
-footer h3 {
-    color: var(--color4);
-    text-align: center;
-    padding: 20px;
 }

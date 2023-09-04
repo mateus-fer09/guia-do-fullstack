@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'); /* Font Poppins */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --color1: #4C655F;
+    --color2: #09CF64;
+    --color3: #353F3D;
+    --color4: #FEFEFE;
+    --color5: #F0F2F5;
+    --color6: #DBDBD9;
+    --color7: #282A23;
+    --color8: #181912;
+}
+
+@media screen and (max-width: 580px) {
+    header .headline {
+        font-size: 1.5em;
+    }
+    
+}
