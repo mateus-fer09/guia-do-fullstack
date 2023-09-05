@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'); /* Font Poppins */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"); /* Icones Bootstap */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --color1: #4C655F;
+    --color2: #09CF64;
+    --color3: #353F3D;
+    --color4: #FEFEFE;
+    --color5: #F0F2F5;
+    --color6: #DBDBD9;
+    --color7: #282A23;
+    --color8: #181912;
+}
+
+body {
+    background-color: var(--color5);
+    position: relative;
+}
+
+.nav-left-js {
+    width: 300px;
+    height: 100%;
+    background-color: var(--color4);
+    box-shadow: 0 0 10px #18191281;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-left-js .headline {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-left-js .headline .img {
+    width: 130px;
+    height: 130px;
+    background-color: yellow;
+    box-shadow: 0 0 5px #181912;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.nav-left-js .iniciante {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.nav-left-js .iniciante details {
+    border: 1px solid #18191252;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.nav-left-js .iniciante details summary {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.nav-left-js .iniciante details a {
+    padding: 10px; padding-left: 16px;
+    transition: 0.2s;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.nav-left-js .iniciante details a:hover {
+    background-color: var(--color6);
+}

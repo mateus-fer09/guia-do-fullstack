@@ -1,17 +1,25 @@
-openNav = () => {
-    let nav = document.querySelector('.nav-left')
-    nav.style.width = "300px"
-}
-
+const buttonClose = document.querySelector('.close-nav')
 const buttonOpen = document.querySelector('.bi-list')
+const main = document.getElementById('main')
+const navLeft = document.querySelector('.nav-left')
 
-buttonOpen.addEventListener("click", openNav)
+
+openNav = () => {
+    navLeft.style.width = "300px"
+    if (window.innerWidth >= 580) {
+        main.style.marginLeft = "300px"
+    }
+}
 
 closeNav = () => {
-    let nav = document.querySelector('.nav-left')
-    nav.style.width = "0px"
+    navLeft.style.width = "0px"
+    main.style.marginLeft = "0px"
 }
 
-const buttonClose = document.querySelector('.close-nav')
+buttonOpen.addEventListener("click", function() {
+    openNav()
+})
 
-buttonClose.addEventListener("click", closeNav)
+buttonClose.addEventListener("click", function() {
+    closeNav()
+})
