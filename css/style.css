@@ -1,265 +1,94 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'); /* Font Poppins */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"); /* Icones Bootstap */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-a {
-    text-decoration: none;
-}
-
-:root {
-    --color1: #4C655F;
-    --color2: #09CF64;
-    --color3: #353F3D;
-    --color4: #FEFEFE;
-    --color5: #F0F2F5;
-    --color6: #DBDBD9;
-    --color7: #282A23;
-    --color8: #181912;
-}
+a {text-decoration: none;}
 
 body {
-    background-color: var(--color5);
-    position: relative;
+    background-color: #181717;
+    color: #dbdbdb;
+    height: 2000px;
 }
 
-.nav-left {
+nav {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #222;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--color8);
-    color: var(--color4);
-    width: 0px;
-    height: 100%;
-    transition: 0.3s;
-    overflow: hidden;
-    overflow-y: auto;
-    z-index: 1;
+    transition: top 0.3s;
 }
 
-.nav-left-content {
-    padding: 20px;
+nav #logo {
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    font-weight: 700;
 }
 
-.nav-left-content .close-nav {
-    font-size: 1em;
-    text-align: center;
-    margin-top: 30px;
-    border: 2px solid var(--color2);
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+nav .bi {
+    display: none;
 }
 
-.nav-left-content .close-nav:hover {
-    background-color: var(--color4);
-    color: var(--color8);
-    box-shadow: 0 0 10px #09CF64;
-}
-
-.nav-left-content .headline h1 {
-    text-align: center;
-    color: var(--color2);
-}
-
-.nav-left-content .headline p {
-    text-align: center;
-    font-size: 0.8em;
-    margin-top: 7px;
-}
-
-.nav-left-content .navigation {
-    margin-top: 40px;
-    border-top: 2px solid #282A23;
-    border-bottom: 2px solid #282A23;
-    padding: 30px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.nav-left-content .navigation a {
-    text-decoration: none;
-    color: var(--color6);
-    border: 1px solid var(--color1);
-    width: 100%;
-    padding: 5px 10px;
-    border-radius: 10px;
+nav .navigation a {
+    padding: 10px;
+    color: #dbdbdb;
     font-size: 0.9em;
-    transition: 0.2s ease;
+    transition: 0.3s;
+    position: relative;
 }
 
-.nav-left-content .navigation a:hover {
-    background-color: var(--color2);
-    color: var(--color8);
+nav .navigation a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #6d00d3;
+    box-shadow: 0 0 5px #8304fa;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
 }
 
-.nav-left-content .social {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+nav .navigation a:hover::after {
+    width: 100%;
+    color: white;
 }
 
-.nav-left-content .social .bi {
-    font-size: 1.5em;
-    background-color: var(--color7);
-    color: var(--color2);
-    padding: 5px 10px;
-    border-radius: 10px;
+nav .box-button a button {
+    padding: 10px 13px;
+    border: none;
+    border-radius: 15px;
+    background-color: #5501a3;
+    color: white;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.nav-left-content .social .bi:hover {
-    background-color: var(--color2);
-    color: var(--color8);
+nav .box-button a button:hover {
+    background-color: #6d00d3;
+
+}
+
+nav .box-button a #first {
+    margin-right: 20px;
 }
 
 header {
     width: 100%;
-    height: 70px;
-    background-color: var(--color8);
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .top {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-header .top .bi {
-    color: var(--color2);
-    background-color: var(--color7);
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-size: 1.7em;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-header .top .bi:hover {
-    background-color: var(--color2);
-    color: var(--color8);
-}
-
-header .headline {
-    color: var(--color2);
-    font-size: 1.8em;
-    padding: 10px 20px;
-    text-align: right;
-}
-
-header .headline span {
-    color: var(--color4);
-}
-
-main {
-    max-width: 1366px;
-    height: auto;
-    margin: auto;
-    transition: 0.3s ease;
-}
-
-main h1 {
-    padding: 20px;
-}
-
-main > h2 {
-    padding: 20px;
-    color: var(--color4);
-    background-color: var(--color7);
-}
-
-main h2 span {
-    color: var(--color2);
-}
-.guias {
-    width: auto;
-    height: auto;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.guias .guia {
-    width: 330px;
-    height: auto;
-    box-shadow: 0 0 5px #181912;
-    transition: 0.3s ease-in;
-}
-
-.guias .guia:hover {
-    background-color: var(--color4);
-    transform: scale(105%);
-}
-
-.guias .guia .img {
-    width: 100%;
-    height: 157px;
-    background-color: var(--color2);
-}
-
-.guias .guia .img img {
-    width: 100%;
-    height: auto;
-}
-
-.guias .guia .headline {
-    padding: 10px;
-    margin-top: 13px;
-}
-
-.guias .guia .headline h2 {
-    color: var(--color8);
-    margin-bottom: 7px;
-}
-
-.guias .guia .headline p {
-    margin-bottom: 10px;
-    text-align: justify;
-}
-
-.guias .guia .headline a button {
-    padding: 5px 10px;
-    background-color: var(--color2);
-    border: none;
-    box-shadow: 1px 1px 3px #181912;
-    color: var(--color8);
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.guias .guia .headline a button:hover {
-    background-color: #08974b;
-}
-
-footer {
-    width: 100%;
-    height: auto;
-    background-color: var(--color8);
-    color: var(--color4);
-    position: absolute;
-    bottom: -180px;
-    left: 0;
-    padding: 10px;
-}
-
-footer h3 {
-    padding: 10px;
+    height: 500px;
+    margin-top: 110px;
 }

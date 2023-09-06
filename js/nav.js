@@ -1,25 +1,28 @@
-const buttonClose = document.querySelector('.close-nav')
-const buttonOpen = document.querySelector('.bi-list')
-const main = document.getElementById('main')
-const navLeft = document.querySelector('.nav-left')
+const nav = document.querySelector('.nav')
+let prevScrollPos = window.pageYOffset
 
+window.addEventListener("scroll", () => {
+    const currentScrollPos = window.pageYOffset
+    if (prevScrollPos > currentScrollPos) {
+        nav.style.top = '0'
+    } else {
+        nav.style.top = '-100px'
+    }
+
+    prevScrollPos = currentScrollPos
+})
+
+const buttonOpen = document.querySelector('.bi-list')
+const buttonClose = document.querySelector('.bi-x-lg')
+const menu = document.querySelector('.navigation')
 
 openNav = () => {
-    navLeft.style.width = "300px"
-    if (window.innerWidth >= 580) {
-        main.style.marginLeft = "300px"
-    }
+    menu.style.width = "100%"
 }
 
 closeNav = () => {
-    navLeft.style.width = "0px"
-    main.style.marginLeft = "0px"
+    menu.style.width = "0%"
 }
 
-buttonOpen.addEventListener("click", function() {
-    openNav()
-})
-
-buttonClose.addEventListener("click", function() {
-    closeNav()
-})
+buttonOpen.addEventListener("click", openNav)
+buttonClose.addEventListener("click", closeNav)
