@@ -11,10 +11,23 @@
 
 a {text-decoration: none;}
 
+:root {
+    --color1: #21BF48;
+    --color2: #1FA641;
+    --color3: #262626;
+    --color4: #F2F2F2;
+    --color5: #0D0D0D;
+    --color6: #acacac;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #181717;
+    background-color: var(--color3);
     color: #dbdbdb;
-    height: 2000px;
+    position: relativez;
 }
 
 nav {
@@ -24,7 +37,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #222;
+    background-color: var(--color5);
     position: fixed;
     top: 0;
     left: 0;
@@ -32,7 +45,7 @@ nav {
 }
 
 nav #logo {
-    color: white;
+    color: var(--color4);
     font-size: 2em;
     padding: 10px;
     font-weight: 700;
@@ -44,7 +57,7 @@ nav .bi {
 
 nav .navigation a {
     padding: 10px;
-    color: #dbdbdb;
+    color: var(--color6);
     font-size: 0.9em;
     transition: 0.3s;
     position: relative;
@@ -54,8 +67,8 @@ nav .navigation a::after {
     content: "";
     width: 0%;
     height: 2px;
-    background-color: #6d00d3;
-    box-shadow: 0 0 5px #8304fa;
+    background-color: var(--color1);
+    box-shadow: 0 0 5px var(--color2);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -71,7 +84,7 @@ nav .box-button a button {
     padding: 10px 13px;
     border: none;
     border-radius: 15px;
-    background-color: #5501a3;
+    background-color: var(--color2);
     color: white;
     font-weight: 600;
     cursor: pointer;
@@ -79,7 +92,7 @@ nav .box-button a button {
 }
 
 nav .box-button a button:hover {
-    background-color: #6d00d3;
+    background-color: var(--color1);
 
 }
 
@@ -89,27 +102,244 @@ nav .box-button a #first {
 
 header {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     margin-top: 110px;
     padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid #8304fa;
+    border-bottom: 1px solid var(--color1);
 }
 
 header .headline {
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-header .headline h2 {
-    color: #6d00d3;
-    margin-top: 10px;
+header .headline h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+header .headline h1 #detalhe {
+    background: linear-gradient(to left, #1FA641, #12da86);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .headline h3 {
+    color: var(--color6);
+    text-align: center;
+}
+
+header .headline a {
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-weight: 600;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 20px;
+    transition: 0.5s;
+    border: 2px solid var(--color5);
+}
+
+header .headline a:hover {
+    transform: scale(110%);
+    background-color: var(--color1);
+    box-shadow: 0 0 15px var(--color2);
 }
 
 main {
     max-width: 1350px;
     height: 200px;
     margin: auto;
+}
+
+.vantagens {
+    width: 100%;
+    height: auto;
     padding: 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vantagens > h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.vantagens h1 span {
+    border-bottom: 2px solid var(--color1);
+}
+
+.vantagens .vantagens-content {
+    display: flex;
+    gap: 40px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.vantagens .vantagens-content .item {
+    width: 370px;
+    height: auto;
+}
+
+.vantagens .vantagens-content .item h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to left, #1FA641, #12da86);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vantagens .vantagens-content .item p {
+    text-align: center;
+    color: var(--color6);
+    font-size: 1.1em;
+}
+
+.saber {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-left: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    border-left: 3px solid var(--color1);
+}
+
+.saber .img {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.saber .img .bi {
+    font-size: 150px;
+    background: linear-gradient(to left, #1FA641 5%, #12da86 95%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.saber .headline {
+    width: 700px;
+}
+
+.saber .headline .headline-content {
+    margin-top: 30px;
+}
+
+.saber .headline .headline-content h2 {
+    margin-bottom: 13px;
+    color: var(--color1);
+}
+
+.saber .headline .headline-content ul {
+    padding: 10px;
+}
+
+.saber .headline .headline-content ul li {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.cta {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 40px 20px 20px 20px;
+    background-color: var(--color4);
+}
+
+.cta .headline {
+    max-width: 967px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta .headline h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color5);
+    margin-bottom: 40px;
+}
+
+.cta .headline h2 .copy-det {
+    color: var(--color1);
+}
+
+.cta .headline #title {
+    background-color: var(--color1);
+    color: var(--color3);
+    padding: 10px;
+}
+
+.cta .headline .banner {
+    max-width: 700px;
+    height: 300px;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta .headline .banner ul {
+    columns: 2;
+    padding: 10px;
+    color: var(--color5);
+    padding-left: 50px;
+}
+
+.cta .headline .banner ul li {
+    font-size: 1.5em;
+    margin-bottom: 7px;
+}
+
+.cta .headline a button {
+    border: none;
+    padding: 10px;
+    background-color: var(--color1);
+    color: var(--color5);
+    font-size: 2em;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid var(--color5);
+    box-shadow: 0 0 5px var(--color3);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.cta .headline a button:hover {
+    background-color: var(--color4);
+    color: var(--color5);
+    transform: scale(105%);
 }

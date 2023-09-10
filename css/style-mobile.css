@@ -9,12 +9,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color1: #21BF48;
+    --color2: #1FA641;
+    --color3: #262626;
+    --color4: #F2F2F2;
+    --color5: #0D0D0D;
+    --color6: #acacac;  
+}
+
 @media screen and (max-width: 1000px) {
     nav .navigation {
         display: flex;
         flex-direction: column;
         position: fixed;
-        background-color: #282828;
+        background-color: var(--color3);
         top: 0;
         left: 0;
         width: 0%;
@@ -54,7 +63,7 @@
         display: block;
         font-size: 2em;
         cursor: pointer;
-        color: #6d00d3;
+        color: var(--color1);
     }
 
     nav #logo {
@@ -63,5 +72,18 @@
 
     nav {
         justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .part1 .video {
+        width: 468px;
+        height: 265px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .cta .headline .banner ul {
+        columns: auto;
     }
 }

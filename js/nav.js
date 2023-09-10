@@ -6,7 +6,7 @@ window.addEventListener("scroll", () => {
     if (prevScrollPos > currentScrollPos) {
         nav.style.top = '0'
     } else {
-        nav.style.top = '-100px'
+        nav.style.top = '-103px'
     }
 
     prevScrollPos = currentScrollPos
