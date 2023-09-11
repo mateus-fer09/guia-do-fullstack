@@ -178,10 +178,6 @@ main {
     text-align: center;
 }
 
-.vantagens h1 span {
-    border-bottom: 2px solid var(--color1);
-}
-
 .vantagens .vantagens-content {
     display: flex;
     gap: 40px;
@@ -260,6 +256,7 @@ main {
 
 .saber .headline .headline-content ul {
     padding: 10px;
+    padding-left: 20px;
 }
 
 .saber .headline .headline-content ul li {
@@ -280,6 +277,7 @@ main {
     max-width: 967px;
     height: auto;
     margin: auto;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;

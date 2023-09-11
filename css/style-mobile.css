@@ -42,10 +42,12 @@
         flex-direction: column;
         margin-top: 70px;
         gap: 10px;
+        border-bottom: 1px solid #acacac1f;
+        border-top: 1px solid #acacac1f;
     }
 
     nav .navigation .navigation-content .links a {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     nav .navigation .navigation-content .bi-x-lg {
