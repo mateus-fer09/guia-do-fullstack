@@ -1,2 +1,2 @@
 # guia-do-fullstack
- O Guia do Fullstack é um projeto onde eu registro minhas anotações dos meus estudos e compartilho com outras que também estão aprendendo.
+ Guia do Full Stack é um projeto focado em um público iniciante na area de desenvolvimento web. Muito conteúdo e dicas sobre como desenvolver sites cada vez melhores!
